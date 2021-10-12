@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="SeriesProject" customModuleProvider="target">
             <connections>
+                <outlet property="dayOfSeriesCollectionView" destination="KGi-tD-A03" id="2Pf-FJ-y6V"/>
+                <outlet property="popularSeriesCollectionView" destination="Gwh-jD-bRl" id="FU2-yp-XAL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="89M-jD-aSD"/>
             </connections>
         </placeholder>
@@ -18,14 +20,56 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-tD-A03">
+                    <rect key="frame" x="0.0" y="44" width="414" height="156"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="156" id="y52-fb-nxv"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vGO-Nh-ZBu">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="nKw-nh-MnY"/>
+                        <outlet property="delegate" destination="-1" id="ezy-iK-qiC"/>
+                    </connections>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Gwh-jD-bRl">
+                    <rect key="frame" x="0.0" y="200" width="414" height="662"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M7y-kj-PNe">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eTJ-iP-icL"/>
+                        <outlet property="delegate" destination="-1" id="oa8-u8-Yof"/>
+                    </connections>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
-            <point key="canvasLocation" x="97" y="89"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gwh-jD-bRl" secondAttribute="bottom" id="2DC-2l-zGw"/>
+                <constraint firstItem="KGi-tD-A03" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="9BW-QS-CfP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gwh-jD-bRl" secondAttribute="trailing" id="Ayv-Z1-8Ay"/>
+                <constraint firstItem="KGi-tD-A03" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gvf-UB-iOf"/>
+                <constraint firstItem="KGi-tD-A03" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IFs-Gh-EGa"/>
+                <constraint firstItem="Gwh-jD-bRl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XUy-sx-0g8"/>
+                <constraint firstItem="Gwh-jD-bRl" firstAttribute="top" secondItem="KGi-tD-A03" secondAttribute="bottom" id="lUd-rt-SJO"/>
+            </constraints>
+            <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

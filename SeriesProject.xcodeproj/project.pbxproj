@@ -24,6 +24,11 @@
 		C3E170D0271605AE00FDA629 /* BlobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170CF271605AE00FDA629 /* BlobAPI.swift */; };
 		C3E170D2271605C700FDA629 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170D1271605C700FDA629 /* BaseAPI.swift */; };
 		C3E170D4271608FC00FDA629 /* TheatreLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = C3E170D3271608FC00FDA629 /* TheatreLottie.json */; };
+		C3E170D727160AB000FDA629 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170D627160AB000FDA629 /* BaseViewModel.swift */; };
+		C3E170DD27160D3700FDA629 /* DayOfSeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170DB27160D3700FDA629 /* DayOfSeriesCell.swift */; };
+		C3E170DE27160D3700FDA629 /* DayOfSeriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170DC27160D3700FDA629 /* DayOfSeriesCell.xib */; };
+		C3E170E127160D4A00FDA629 /* PopularSeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170DF27160D4A00FDA629 /* PopularSeriesCell.swift */; };
+		C3E170E227160D4A00FDA629 /* PopularSeriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170E027160D4A00FDA629 /* PopularSeriesCell.xib */; };
 		C5F17C5F00460C3F583A0B31 /* Pods_SeriesProject_SeriesProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C44F5D387376CD7CCEDCEE6 /* Pods_SeriesProject_SeriesProjectUITests.framework */; };
 		C9FE4F6E2CA07226EAB165FA /* Pods_SeriesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E82DD6AE72DF3698C7499C /* Pods_SeriesProject.framework */; };
 		DDFC175756210F948345BBC3 /* Pods_SeriesProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE76BA573FB0F7C9F38206C /* Pods_SeriesProjectTests.framework */; };
@@ -79,6 +84,11 @@
 		C3E170CF271605AE00FDA629 /* BlobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobAPI.swift; sourceTree = "<group>"; };
 		C3E170D1271605C700FDA629 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		C3E170D3271608FC00FDA629 /* TheatreLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TheatreLottie.json; sourceTree = "<group>"; };
+		C3E170D627160AB000FDA629 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		C3E170DB27160D3700FDA629 /* DayOfSeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfSeriesCell.swift; sourceTree = "<group>"; };
+		C3E170DC27160D3700FDA629 /* DayOfSeriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayOfSeriesCell.xib; sourceTree = "<group>"; };
+		C3E170DF27160D4A00FDA629 /* PopularSeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesCell.swift; sourceTree = "<group>"; };
+		C3E170E027160D4A00FDA629 /* PopularSeriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularSeriesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +200,7 @@
 		C3E170B8271602E300FDA629 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				C3E170D527160A9D00FDA629 /* Base */,
 				C3E170C8271603C700FDA629 /* Splash */,
 				C3E170BA2716031B00FDA629 /* Home */,
 				C3E170BB2716031F00FDA629 /* Detail */,
@@ -208,6 +219,7 @@
 		C3E170BA2716031B00FDA629 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C3E170D827160CDD00FDA629 /* HomeCollectionViewCell */,
 				C3E1708A2716016000FDA629 /* HomeVC.swift */,
 				C3E170B62716029700FDA629 /* HomeVC.xib */,
 				C3E170BD2716033E00FDA629 /* HomeViewModel.swift */,
@@ -265,6 +277,41 @@
 				C3E170CA271603E300FDA629 /* SplashVC.xib */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		C3E170D527160A9D00FDA629 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170D627160AB000FDA629 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C3E170D827160CDD00FDA629 /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170DA27160CFF00FDA629 /* DayOfSeriesCell */,
+				C3E170D927160CF400FDA629 /* PopularSeriesCell */,
+			);
+			path = HomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C3E170D927160CF400FDA629 /* PopularSeriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170DF27160D4A00FDA629 /* PopularSeriesCell.swift */,
+				C3E170E027160D4A00FDA629 /* PopularSeriesCell.xib */,
+			);
+			path = PopularSeriesCell;
+			sourceTree = "<group>";
+		};
+		C3E170DA27160CFF00FDA629 /* DayOfSeriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170DB27160D3700FDA629 /* DayOfSeriesCell.swift */,
+				C3E170DC27160D3700FDA629 /* DayOfSeriesCell.xib */,
+			);
+			path = DayOfSeriesCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +426,8 @@
 				C3E170C22716034A00FDA629 /* DetailVC.xib in Resources */,
 				C3E170CC271603E300FDA629 /* SplashVC.xib in Resources */,
 				C3E170B72716029700FDA629 /* HomeVC.xib in Resources */,
+				C3E170E227160D4A00FDA629 /* PopularSeriesCell.xib in Resources */,
+				C3E170DE27160D3700FDA629 /* DayOfSeriesCell.xib in Resources */,
 				C3E170D4271608FC00FDA629 /* TheatreLottie.json in Resources */,
 				C3E170902716016200FDA629 /* Assets.xcassets in Resources */,
 			);
@@ -508,12 +557,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E170E127160D4A00FDA629 /* PopularSeriesCell.swift in Sources */,
 				C3E1708B2716016000FDA629 /* HomeVC.swift in Sources */,
+				C3E170D727160AB000FDA629 /* BaseViewModel.swift in Sources */,
 				C3E170D0271605AE00FDA629 /* BlobAPI.swift in Sources */,
 				C3E170C12716034A00FDA629 /* DetailVC.swift in Sources */,
 				C3E170D2271605C700FDA629 /* BaseAPI.swift in Sources */,
 				C3E170BE2716033E00FDA629 /* HomeViewModel.swift in Sources */,
 				C3E170C42716035500FDA629 /* DetailViewModel.swift in Sources */,
+				C3E170DD27160D3700FDA629 /* DayOfSeriesCell.swift in Sources */,
 				C3E170872716016000FDA629 /* AppDelegate.swift in Sources */,
 				C3E170CB271603E300FDA629 /* SplashVC.swift in Sources */,
 				C3E170CE2716051D00FDA629 /* SeriesResponse.swift in Sources */,
