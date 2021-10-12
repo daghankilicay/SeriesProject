@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let rootViewController = HomeVC()
+        let rootViewController = SplashVC()
         window?.rootViewController = rootViewController
     }
 }

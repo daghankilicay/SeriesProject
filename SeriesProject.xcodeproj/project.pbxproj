@@ -23,6 +23,7 @@
 		C3E170CE2716051D00FDA629 /* SeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170CD2716051D00FDA629 /* SeriesResponse.swift */; };
 		C3E170D0271605AE00FDA629 /* BlobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170CF271605AE00FDA629 /* BlobAPI.swift */; };
 		C3E170D2271605C700FDA629 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170D1271605C700FDA629 /* BaseAPI.swift */; };
+		C3E170D4271608FC00FDA629 /* TheatreLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = C3E170D3271608FC00FDA629 /* TheatreLottie.json */; };
 		C5F17C5F00460C3F583A0B31 /* Pods_SeriesProject_SeriesProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C44F5D387376CD7CCEDCEE6 /* Pods_SeriesProject_SeriesProjectUITests.framework */; };
 		C9FE4F6E2CA07226EAB165FA /* Pods_SeriesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E82DD6AE72DF3698C7499C /* Pods_SeriesProject.framework */; };
 		DDFC175756210F948345BBC3 /* Pods_SeriesProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE76BA573FB0F7C9F38206C /* Pods_SeriesProjectTests.framework */; };
@@ -77,6 +78,7 @@
 		C3E170CD2716051D00FDA629 /* SeriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesResponse.swift; sourceTree = "<group>"; };
 		C3E170CF271605AE00FDA629 /* BlobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobAPI.swift; sourceTree = "<group>"; };
 		C3E170D1271605C700FDA629 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		C3E170D3271608FC00FDA629 /* TheatreLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TheatreLottie.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				C3E170C52716037A00FDA629 /* Models */,
 				C3E1708F2716016200FDA629 /* Assets.xcassets */,
 				C3E170912716016200FDA629 /* LaunchScreen.storyboard */,
+				C3E170D3271608FC00FDA629 /* TheatreLottie.json */,
 				C3E170942716016200FDA629 /* Info.plist */,
 			);
 			path = SeriesProject;
@@ -376,6 +379,7 @@
 				C3E170C22716034A00FDA629 /* DetailVC.xib in Resources */,
 				C3E170CC271603E300FDA629 /* SplashVC.xib in Resources */,
 				C3E170B72716029700FDA629 /* HomeVC.xib in Resources */,
+				C3E170D4271608FC00FDA629 /* TheatreLottie.json in Resources */,
 				C3E170902716016200FDA629 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
