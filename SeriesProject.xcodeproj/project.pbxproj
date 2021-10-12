@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C3E170872716016000FDA629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170862716016000FDA629 /* AppDelegate.swift */; };
-		C3E170892716016000FDA629 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170882716016000FDA629 /* SceneDelegate.swift */; };
-		C3E1708B2716016000FDA629 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1708A2716016000FDA629 /* ViewController.swift */; };
-		C3E1708E2716016000FDA629 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E1708C2716016000FDA629 /* Main.storyboard */; };
+		C3E1708B2716016000FDA629 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1708A2716016000FDA629 /* HomeVC.swift */; };
 		C3E170902716016200FDA629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E1708F2716016200FDA629 /* Assets.xcassets */; };
 		C3E170932716016200FDA629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E170912716016200FDA629 /* LaunchScreen.storyboard */; };
 		C3E1709E2716016300FDA629 /* SeriesProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1709D2716016300FDA629 /* SeriesProjectTests.swift */; };
 		C3E170A92716016300FDA629 /* SeriesProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170A82716016300FDA629 /* SeriesProjectUITests.swift */; };
+		C3E170B72716029700FDA629 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170B62716029700FDA629 /* HomeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +36,7 @@
 /* Begin PBXFileReference section */
 		C3E170832716016000FDA629 /* SeriesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeriesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E170862716016000FDA629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3E170882716016000FDA629 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3E1708A2716016000FDA629 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C3E1708D2716016000FDA629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3E1708A2716016000FDA629 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C3E1708F2716016200FDA629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3E170922716016200FDA629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3E170942716016200FDA629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		C3E170A42716016300FDA629 /* SeriesProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeriesProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E170A82716016300FDA629 /* SeriesProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesProjectUITests.swift; sourceTree = "<group>"; };
 		C3E170AA2716016300FDA629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E170B62716029700FDA629 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				C3E170862716016000FDA629 /* AppDelegate.swift */,
-				C3E170882716016000FDA629 /* SceneDelegate.swift */,
-				C3E1708A2716016000FDA629 /* ViewController.swift */,
-				C3E1708C2716016000FDA629 /* Main.storyboard */,
+				C3E1708A2716016000FDA629 /* HomeVC.swift */,
+				C3E170B62716029700FDA629 /* HomeVC.xib */,
 				C3E1708F2716016200FDA629 /* Assets.xcassets */,
 				C3E170912716016200FDA629 /* LaunchScreen.storyboard */,
 				C3E170942716016200FDA629 /* Info.plist */,
@@ -232,8 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E170932716016200FDA629 /* LaunchScreen.storyboard in Resources */,
+				C3E170B72716029700FDA629 /* HomeVC.xib in Resources */,
 				C3E170902716016200FDA629 /* Assets.xcassets in Resources */,
-				C3E1708E2716016000FDA629 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3E1708B2716016000FDA629 /* ViewController.swift in Sources */,
+				C3E1708B2716016000FDA629 /* HomeVC.swift in Sources */,
 				C3E170872716016000FDA629 /* AppDelegate.swift in Sources */,
-				C3E170892716016000FDA629 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C3E1708C2716016000FDA629 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3E1708D2716016000FDA629 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C3E170912716016200FDA629 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6D6GCMJC;
 				INFOPLIST_FILE = SeriesProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daghankilicay.SeriesProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6D6GCMJC;
 				INFOPLIST_FILE = SeriesProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daghankilicay.SeriesProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
