@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		C3E170C42716035500FDA629 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170C32716035500FDA629 /* DetailViewModel.swift */; };
 		C3E170CB271603E300FDA629 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170C9271603E300FDA629 /* SplashVC.swift */; };
 		C3E170CC271603E300FDA629 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170CA271603E300FDA629 /* SplashVC.xib */; };
+		C3E170CE2716051D00FDA629 /* SeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170CD2716051D00FDA629 /* SeriesResponse.swift */; };
 		C5F17C5F00460C3F583A0B31 /* Pods_SeriesProject_SeriesProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C44F5D387376CD7CCEDCEE6 /* Pods_SeriesProject_SeriesProjectUITests.framework */; };
 		C9FE4F6E2CA07226EAB165FA /* Pods_SeriesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E82DD6AE72DF3698C7499C /* Pods_SeriesProject.framework */; };
 		DDFC175756210F948345BBC3 /* Pods_SeriesProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE76BA573FB0F7C9F38206C /* Pods_SeriesProjectTests.framework */; };
@@ -71,6 +72,7 @@
 		C3E170C32716035500FDA629 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C3E170C9271603E300FDA629 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		C3E170CA271603E300FDA629 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		C3E170CD2716051D00FDA629 /* SeriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,6 @@
 				580980A3B5B841ADE75F8386 /* Pods-SeriesProjectTests.debug.xcconfig */,
 				64EFCFC2A2994D99593FE44E /* Pods-SeriesProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +229,7 @@
 		C3E170C52716037A00FDA629 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3E170CD2716051D00FDA629 /* SeriesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -502,6 +504,7 @@
 				C3E170C42716035500FDA629 /* DetailViewModel.swift in Sources */,
 				C3E170872716016000FDA629 /* AppDelegate.swift in Sources */,
 				C3E170CB271603E300FDA629 /* SplashVC.swift in Sources */,
+				C3E170CE2716051D00FDA629 /* SeriesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
