@@ -97,7 +97,8 @@
 		C3E170852716016000FDA629 /* SeriesProject */ = {
 			isa = PBXGroup;
 			children = (
-				C3E170862716016000FDA629 /* AppDelegate.swift */,
+				C3E170B9271602E900FDA629 /* AppDelegate */,
+				C3E170B8271602E300FDA629 /* Application */,
 				C3E1708A2716016000FDA629 /* HomeVC.swift */,
 				C3E170B62716029700FDA629 /* HomeVC.xib */,
 				C3E1708F2716016200FDA629 /* Assets.xcassets */,
@@ -123,6 +124,21 @@
 				C3E170AA2716016300FDA629 /* Info.plist */,
 			);
 			path = SeriesProjectUITests;
+			sourceTree = "<group>";
+		};
+		C3E170B8271602E300FDA629 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C3E170B9271602E900FDA629 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170862716016000FDA629 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
