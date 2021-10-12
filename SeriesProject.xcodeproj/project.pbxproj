@@ -14,6 +14,12 @@
 		C3E1709E2716016300FDA629 /* SeriesProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1709D2716016300FDA629 /* SeriesProjectTests.swift */; };
 		C3E170A92716016300FDA629 /* SeriesProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170A82716016300FDA629 /* SeriesProjectUITests.swift */; };
 		C3E170B72716029700FDA629 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170B62716029700FDA629 /* HomeVC.xib */; };
+		C3E170BE2716033E00FDA629 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170BD2716033E00FDA629 /* HomeViewModel.swift */; };
+		C3E170C12716034A00FDA629 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170BF2716034A00FDA629 /* DetailVC.swift */; };
+		C3E170C22716034A00FDA629 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170C02716034A00FDA629 /* DetailVC.xib */; };
+		C3E170C42716035500FDA629 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170C32716035500FDA629 /* DetailViewModel.swift */; };
+		C3E170CB271603E300FDA629 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170C9271603E300FDA629 /* SplashVC.swift */; };
+		C3E170CC271603E300FDA629 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170CA271603E300FDA629 /* SplashVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		C3E170A82716016300FDA629 /* SeriesProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesProjectUITests.swift; sourceTree = "<group>"; };
 		C3E170AA2716016300FDA629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3E170B62716029700FDA629 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		C3E170BD2716033E00FDA629 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C3E170BF2716034A00FDA629 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		C3E170C02716034A00FDA629 /* DetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		C3E170C32716035500FDA629 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C3E170C9271603E300FDA629 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		C3E170CA271603E300FDA629 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,8 @@
 			children = (
 				C3E170B9271602E900FDA629 /* AppDelegate */,
 				C3E170B8271602E300FDA629 /* Application */,
-				C3E1708A2716016000FDA629 /* HomeVC.swift */,
-				C3E170B62716029700FDA629 /* HomeVC.xib */,
+				C3E170BC2716032500FDA629 /* Networking */,
+				C3E170C52716037A00FDA629 /* Models */,
 				C3E1708F2716016200FDA629 /* Assets.xcassets */,
 				C3E170912716016200FDA629 /* LaunchScreen.storyboard */,
 				C3E170942716016200FDA629 /* Info.plist */,
@@ -129,6 +141,9 @@
 		C3E170B8271602E300FDA629 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				C3E170C8271603C700FDA629 /* Splash */,
+				C3E170BA2716031B00FDA629 /* Home */,
+				C3E170BB2716031F00FDA629 /* Detail */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -139,6 +154,65 @@
 				C3E170862716016000FDA629 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C3E170BA2716031B00FDA629 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1708A2716016000FDA629 /* HomeVC.swift */,
+				C3E170B62716029700FDA629 /* HomeVC.xib */,
+				C3E170BD2716033E00FDA629 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C3E170BB2716031F00FDA629 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170BF2716034A00FDA629 /* DetailVC.swift */,
+				C3E170C02716034A00FDA629 /* DetailVC.xib */,
+				C3E170C32716035500FDA629 /* DetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C3E170BC2716032500FDA629 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170C62716038A00FDA629 /* APIs */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C3E170C52716037A00FDA629 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3E170C62716038A00FDA629 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170C7271603A100FDA629 /* BaseAPI */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		C3E170C7271603A100FDA629 /* BaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseAPI;
+			sourceTree = "<group>";
+		};
+		C3E170C8271603C700FDA629 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170C9271603E300FDA629 /* SplashVC.swift */,
+				C3E170CA271603E300FDA629 /* SplashVC.xib */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E170932716016200FDA629 /* LaunchScreen.storyboard in Resources */,
+				C3E170C22716034A00FDA629 /* DetailVC.xib in Resources */,
+				C3E170CC271603E300FDA629 /* SplashVC.xib in Resources */,
 				C3E170B72716029700FDA629 /* HomeVC.xib in Resources */,
 				C3E170902716016200FDA629 /* Assets.xcassets in Resources */,
 			);
@@ -272,7 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E1708B2716016000FDA629 /* HomeVC.swift in Sources */,
+				C3E170C12716034A00FDA629 /* DetailVC.swift in Sources */,
+				C3E170BE2716033E00FDA629 /* HomeViewModel.swift in Sources */,
+				C3E170C42716035500FDA629 /* DetailViewModel.swift in Sources */,
 				C3E170872716016000FDA629 /* AppDelegate.swift in Sources */,
+				C3E170CB271603E300FDA629 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
