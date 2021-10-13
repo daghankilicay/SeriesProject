@@ -827,7 +827,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6D6GCMJC;
-				INFOPLIST_FILE = /Users/daghankilicay/Desktop/MyApps/SeriesProject/SeriesProject/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = SeriesProject/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -848,7 +848,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6D6GCMJC;
-				INFOPLIST_FILE = /Users/daghankilicay/Desktop/MyApps/SeriesProject/SeriesProject/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = SeriesProject/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
