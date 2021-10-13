@@ -62,6 +62,7 @@ class HomeVC: BaseVC {
         viewModel.fetchSeriesResponseData()
         registerNib()
         bindStatus()
+        self.title = "Series Project"
     }
     
     private func registerNib() {
@@ -119,6 +120,40 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             return UICollectionViewCell.init()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == popularSeriesCollectionView {
+            let series = viewModel.popularSeries.value?[indexPath.row]
+            
+            let model = DetailViewModel(model: DetailSeriesModel(url: series?.url,
+                                                                 name: series?.name,
+                                                                 premiered: series?.premiered,
+                                                                 image: series?.image?.medium,
+                                                                 summary: series?.summary))
+            let detailVC = DetailVC()
+            detailVC.viewModel = model
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else {
+            let characters = viewModel.dayOfTheSeries.value?.characters?[indexPath.row]
+            let characterModel = DetailCharacterViewModel(model: DetailCharacterModel(name: characters?.name,
+                                                                                      birthday: characters?.birthday,
+                                                                                      img: characters?.img,
+                                                                                      nickName: characters?.nickname,
+                                                                                      portrayed: characters?.portrayed,
+                                                                                      category: characters?.category,
+                                                                                      occupation: characters?.occupation))
+            
+//            let model = DetailViewModel(model: DetailCharacterModel(name: characters?.name, birthday: characters?.birthday, img: characters?.img, nickName: characters?.nickname, portrayed: characters?.portrayed, category: characters?.category, occupation: characters?.occupation)
+            let detailCharacterVC = DetailCharacterVC()
+            detailCharacterVC.viewModel = characterModel
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            self.navigationController?.pushViewController(detailCharacterVC, animated: true)
+            
+        }
+
+        
     }
 }
 

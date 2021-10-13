@@ -47,7 +47,6 @@ class SplashVC: UIViewController {
         let homeVC = HomeVC()
         let navigationController = UINavigationController(rootViewController: homeVC)
         navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Zapfino", size: 15)!]
-        homeVC.title = "Series Project"
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalTransitionStyle = .crossDissolve
         present(navigationController, animated: true)
