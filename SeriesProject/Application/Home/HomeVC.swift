@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ProgressHUD
 
 class HomeVC: BaseVC {
     var viewModel = HomeViewModel()
@@ -34,6 +35,11 @@ class HomeVC: BaseVC {
         }
     }
 
+    @IBOutlet weak var btnReload: UIButton! {
+        didSet {
+            btnReload.isHidden = true
+        }
+    }
     @IBOutlet weak var popularSeriesCollectionView: UICollectionView!{
         didSet {
             popularSeriesCollectionView.isHidden = true
@@ -59,12 +65,15 @@ class HomeVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchSeriesResponseData()
+        viewModel.pageOpened()
         registerNib()
         bindStatus()
         self.title = "Series Project"
     }
     
+    @IBAction func clickedBtnReload(_ sender: Any) {
+        viewModel.pageOpened()
+    }
     // MARK: - RegisterNib
     private func registerNib() {
         dayOfSeriesCollectionView
@@ -81,17 +90,20 @@ extension HomeVC {
     private func bindStatus() {
         viewModel.pageLoadingStatus
             .subscribe(onNext: { [weak self] status in
+                guard let self = self else { return }
                 switch status {
                 case .loading:
-                    self?.showProgress()
-                    self?.popularSeriesCollectionView.isHidden = true
-                    self?.dayOfSeriesCollectionView.isHidden = true
-                case let .error(error):
-                    print(error)
+                    self.showProgress()
+                    self.popularSeriesCollectionView.isHidden = true
+                    self.dayOfSeriesCollectionView.isHidden = true
+                case let .error(_):
+                    self.hideProgress()
+                    AlertHelper.app.alertMessage(vc: self, title: "HATA", message: "Beklenmedik bir hata oluştu.")
+                    self.btnReload.isHidden = false
                 case .success:
-                    self?.hideProgress()
-                    self?.popularSeriesCollectionView.isHidden = false
-                    self?.dayOfSeriesCollectionView.isHidden = false
+                    self.hideProgress()
+                    self.popularSeriesCollectionView.isHidden = false
+                    self.dayOfSeriesCollectionView.isHidden = false
                 }
             })
             .disposed(by: viewModel.disposeBag)
@@ -124,7 +136,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             return UICollectionViewCell.init()
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == popularSeriesCollectionView {
             let series = viewModel.popularSeries.value?[indexPath.row]
@@ -151,10 +163,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             detailCharacterVC.viewModel = characterModel
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationController?.pushViewController(detailCharacterVC, animated: true)
-            
         }
-
-        
     }
 }
 

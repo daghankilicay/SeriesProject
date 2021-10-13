@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="SeriesProject" customModuleProvider="target">
             <connections>
+                <outlet property="btnReload" destination="jIG-YP-Dql" id="VY8-HO-h2P"/>
                 <outlet property="dayOfSeriesCollectionView" destination="KGi-tD-A03" id="2Pf-FJ-y6V"/>
                 <outlet property="popularSeriesCollectionView" destination="Gwh-jD-bRl" id="FU2-yp-XAL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="89M-jD-aSD"/>
@@ -52,6 +53,24 @@
                         <outlet property="delegate" destination="-1" id="oa8-u8-Yof"/>
                     </connections>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-YP-Dql">
+                    <rect key="frame" x="132" y="423" width="150" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Hbs-yC-Q2I"/>
+                        <constraint firstAttribute="height" constant="50" id="a16-xv-HCq"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                    <state key="normal" title="RELOAD"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="clickedBtnReload:" destination="-1" eventType="touchUpInside" id="cmJ-cG-uCe"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DL-sl-wHF">
                     <rect key="frame" x="0.0" y="149" width="414" height="1"/>
                     <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -66,21 +85,29 @@
                 <constraint firstItem="KGi-tD-A03" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gvf-UB-iOf"/>
                 <constraint firstItem="KGi-tD-A03" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IFs-Gh-EGa"/>
                 <constraint firstAttribute="trailing" secondItem="5DL-sl-wHF" secondAttribute="trailing" id="KSj-eR-ru3"/>
+                <constraint firstItem="jIG-YP-Dql" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RKK-ib-ykV"/>
                 <constraint firstItem="Gwh-jD-bRl" firstAttribute="top" secondItem="5DL-sl-wHF" secondAttribute="bottom" constant="5" id="RVX-EA-YVz"/>
                 <constraint firstItem="Gwh-jD-bRl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XUy-sx-0g8"/>
                 <constraint firstItem="5DL-sl-wHF" firstAttribute="top" secondItem="KGi-tD-A03" secondAttribute="bottom" id="hUh-c0-JB3"/>
                 <constraint firstItem="Gwh-jD-bRl" firstAttribute="top" secondItem="KGi-tD-A03" secondAttribute="bottom" constant="6" id="lUd-rt-SJO"/>
+                <constraint firstItem="jIG-YP-Dql" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sYw-ug-Vcc"/>
                 <constraint firstItem="5DL-sl-wHF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xN9-l4-uZT"/>
             </constraints>
             <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

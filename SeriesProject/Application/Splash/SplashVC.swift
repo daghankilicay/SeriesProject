@@ -39,6 +39,7 @@ class SplashVC: UIViewController {
         animationView.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             guard let self = self else { return }
+            self.animationView.removeFromSuperview()
             self.goToHomePage()
         }
     }

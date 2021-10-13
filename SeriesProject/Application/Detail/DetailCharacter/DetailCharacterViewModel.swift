@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DetailCharacterViewModel: BaseViewModel {
+class DetailCharacterViewModel {
     var name: String?
     var birthday: String?
     var img: String?

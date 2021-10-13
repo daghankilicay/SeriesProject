@@ -9,13 +9,16 @@ import UIKit
 
 // MARK: - BaseVC
 class BaseVC: UIViewController {
-    var progress : ProgressView?
+    static var activityIndicator = UIActivityIndicatorView()
 
-    func showProgress(){
-        self.progress = ProgressView.showProgress()
+    func showProgress() {
+        BaseVC.activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let barButton = UIBarButtonItem(customView: BaseVC.activityIndicator)
+        self.navigationItem.setRightBarButton(barButton, animated: true)
+        BaseVC.activityIndicator.startAnimating()
     }
-    
+
     func hideProgress() {
-        self.progress?.removeFromSuperview()
+        BaseVC.activityIndicator.stopAnimating()
     }
 }
