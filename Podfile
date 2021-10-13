@@ -11,7 +11,6 @@ target 'SeriesProject' do
      pod 'RxSwift', '~> 5'
      pod 'RxCocoa', '~> 5'
      pod 'lottie-ios'
-     pod 'ProgressHUD'
 
   target 'SeriesProjectTests' do
     inherit! :search_paths
