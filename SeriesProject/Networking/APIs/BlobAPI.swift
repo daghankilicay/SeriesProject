@@ -15,6 +15,7 @@ public enum HTTPMethod: String {
     case put = "PUT"
 }
 
+// MARK: - BlobAPI
 class BlobAPI: NSObject {
     class func fetch<T: Decodable>(endPoint: String, completion: @escaping (Result<T, Error>) -> Void) {
         let url = URL(string: APIPaths.baseURL.rawValue + endPoint)!

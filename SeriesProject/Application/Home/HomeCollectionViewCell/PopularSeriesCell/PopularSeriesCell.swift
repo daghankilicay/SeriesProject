@@ -18,20 +18,19 @@ class PopularSeriesCell: UICollectionViewCell {
             configureUI()
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         self.layer.cornerRadius = 10
     }
-    
+
     private func configureUI() {
         img.kf.setImage(with: URL(string: popularSeries?.image?.medium ?? ""))
         lblSeriesName.text = popularSeries?.name ?? ""
         lblSeriesPremiered.text = formatDate(date: popularSeries?.premiered)
         lblSeriesLanguage.text = popularSeries?.language ?? ""
     }
-    
+
     private func formatDate(date: String?) -> String {
         guard let date = date else { return "" }
         let inputFormatter = DateFormatter()

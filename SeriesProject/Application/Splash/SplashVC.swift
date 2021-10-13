@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 
+// MARK: - SplashVC
 class SplashVC: UIViewController {
     
     private lazy var animationView: AnimationView = {
@@ -21,7 +22,6 @@ class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLottie()
-        // Do any additional setup after loading the view.
     }
     
     private func setLottie() {

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - DetailSeriesModel
 struct DetailSeriesModel: Codable {
     var url: String?
     var name: String?

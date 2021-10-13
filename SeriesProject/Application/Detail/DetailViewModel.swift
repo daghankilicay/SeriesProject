@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - DetailViewModel
 class DetailViewModel: BaseViewModel {
     var url: String?
     var name: String?

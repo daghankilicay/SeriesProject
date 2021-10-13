@@ -187,17 +187,14 @@
 		C3E170852716016000FDA629 /* SeriesProject */ = {
 			isa = PBXGroup;
 			children = (
-				C3E170EA271620F800FDA629 /* Util */,
-				C3E170E52716206E00FDA629 /* Progress */,
 				C3E170B9271602E900FDA629 /* AppDelegate */,
 				C3E170B8271602E300FDA629 /* Application */,
 				C3E170BC2716032500FDA629 /* Networking */,
 				C3E170C52716037A00FDA629 /* Models */,
-				C3E1708F2716016200FDA629 /* Assets.xcassets */,
-				C3E170912716016200FDA629 /* LaunchScreen.storyboard */,
-				C3E170D3271608FC00FDA629 /* TheatreLottie.json */,
-				C3E170942716016200FDA629 /* Info.plist */,
-				C3F9653E271718BB0055C1EB /* String+Extension.swift */,
+				C3E170EA271620F800FDA629 /* Util */,
+				C3F9654A27172AB90055C1EB /* SupportingFiles */,
+				C3F9654727172A0E0055C1EB /* Resources */,
+				C3F9654B27172B4A0055C1EB /* Components */,
 			);
 			path = SeriesProject;
 			sourceTree = "<group>";
@@ -353,6 +350,7 @@
 		C3E170EA271620F800FDA629 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C3F9654927172A8C0055C1EB /* Extensions */,
 				C3E170EB2716210600FDA629 /* GlobalDef.swift */,
 			);
 			path = Util;
@@ -366,6 +364,48 @@
 				C3F9654527171C380055C1EB /* DetailCharacterViewModel.swift */,
 			);
 			path = DetailCharacter;
+			sourceTree = "<group>";
+		};
+		C3F9654727172A0E0055C1EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1708F2716016200FDA629 /* Assets.xcassets */,
+				C3F9654827172A260055C1EB /* LottieAnimations */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3F9654827172A260055C1EB /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170D3271608FC00FDA629 /* TheatreLottie.json */,
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
+		C3F9654927172A8C0055C1EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3F9653E271718BB0055C1EB /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3F9654A27172AB90055C1EB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170942716016200FDA629 /* Info.plist */,
+				C3E170912716016200FDA629 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C3F9654B27172B4A0055C1EB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170E52716206E00FDA629 /* Progress */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,7 +843,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6D6GCMJC;
-				INFOPLIST_FILE = SeriesProject/Info.plist;
+				INFOPLIST_FILE = /Users/daghankilicay/Desktop/MyApps/SeriesProject/SeriesProject/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -824,7 +864,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6D6GCMJC;
-				INFOPLIST_FILE = SeriesProject/Info.plist;
+				INFOPLIST_FILE = /Users/daghankilicay/Desktop/MyApps/SeriesProject/SeriesProject/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

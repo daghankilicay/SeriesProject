@@ -21,15 +21,14 @@ class DetailVC: UIViewController {
         super.viewDidLoad()
         setNavigation()
         setUI()
-        // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func clickedButton(_ sender: Any) {
         if let url = URL(string: viewModel?.url ?? "") {
             UIApplication.shared.open(url)
         }
     }
-    
+
     private func setNavigation() {
         self.title = "Series Project"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"ALL", style:.plain, target:nil, action:nil)

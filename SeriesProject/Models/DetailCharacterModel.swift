@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - DetailCharacterModel
 struct DetailCharacterModel: Codable {
     var name: String?
     var birthday: String?

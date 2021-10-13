@@ -22,6 +22,7 @@ final class HomeViewModel: BaseViewModel {
     let dayOfTheSeries = BehaviorRelay<DayOfTheSeries?>(value: nil)
     let popularSeries = BehaviorRelay<[PopularSeries]?>(value: nil)
 
+    // MARK: - FetchSeriesResponseData
     func fetchSeriesResponseData() {
         self.pageLoadingStatus.accept(.loading)
         BlobAPI.fetch(endPoint: "jsonblob/887822236724248576") { [unowned self] (seriesResponse: SeriesResponseResult) in
@@ -37,7 +38,6 @@ final class HomeViewModel: BaseViewModel {
     }
 
     func numberOfItems() -> Int {
-//        return result?.count ?? 0
         return 0
     }
 }

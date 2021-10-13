@@ -17,6 +17,7 @@ class DayOfSeriesCell: UICollectionViewCell {
             configureUI()
         }
     }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         img.layer.borderWidth = 1
@@ -28,10 +29,6 @@ class DayOfSeriesCell: UICollectionViewCell {
 
     func configureUI() {
         self.img.kf.setImage(with: URL(string: character?.img ?? ""))
-        
         lblName.text = character?.name ?? ""
-        
-        
-        
     }
 }

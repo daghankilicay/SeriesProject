@@ -65,6 +65,7 @@ class HomeVC: BaseVC {
         self.title = "Series Project"
     }
     
+    // MARK: - RegisterNib
     private func registerNib() {
         dayOfSeriesCollectionView
             .register(UINib(nibName: String(describing: DayOfSeriesCell.self), bundle: nil),
@@ -75,6 +76,7 @@ class HomeVC: BaseVC {
     }
 }
 
+// MARK: - BindStatus
 extension HomeVC {
     private func bindStatus() {
         viewModel.pageLoadingStatus
@@ -96,6 +98,7 @@ extension HomeVC {
     }
 }
 
+// MARK: - CollectionViewDelegateDatasource
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == dayOfSeriesCollectionView {
@@ -144,8 +147,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
                                                                                       portrayed: characters?.portrayed,
                                                                                       category: characters?.category,
                                                                                       occupation: characters?.occupation))
-            
-//            let model = DetailViewModel(model: DetailCharacterModel(name: characters?.name, birthday: characters?.birthday, img: characters?.img, nickName: characters?.nickname, portrayed: characters?.portrayed, category: characters?.category, occupation: characters?.occupation)
             let detailCharacterVC = DetailCharacterVC()
             detailCharacterVC.viewModel = characterModel
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

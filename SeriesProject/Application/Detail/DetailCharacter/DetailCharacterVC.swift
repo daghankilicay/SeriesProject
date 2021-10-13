@@ -13,7 +13,6 @@ class DetailCharacterVC: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblBirthDay: UILabel!
-    
     @IBOutlet weak var lblHeroName: UILabel!
     @IBOutlet weak var lblNickName: UILabel!
     @IBOutlet weak var lblSeriesName: UILabel!
@@ -37,6 +36,5 @@ class DetailCharacterVC: UIViewController {
         lblHeroName.text = viewModel?.name ?? ""
         lblNickName.text = viewModel?.nickName ?? ""
         lblSeriesName.text = viewModel?.category
-//        lblSummary.attributedText = viewModel?.summary?.htmlToAttributedString
     }
 }
