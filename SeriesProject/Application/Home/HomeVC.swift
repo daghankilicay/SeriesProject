@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import ProgressHUD
 
 class HomeVC: BaseVC {
     var viewModel = HomeViewModel()
