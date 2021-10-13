@@ -45,22 +45,12 @@ class SplashVC: UIViewController {
     
     private func goToHomePage() {
         let homeVC = HomeVC()
-        homeVC.modalPresentationStyle = .fullScreen
-        homeVC.modalTransitionStyle = .crossDissolve
-        present(homeVC, animated: true)
-        
-////        window = UIWindow(frame: UIScreen.main.bounds)
-////        let splashController = HomeVC() as UIViewController
-//        navigationController.navigationBar.isTranslucent = false
-//        self.window?.rootViewController = navigationController
-//        self.window?.makeKeyAndVisible()
-        
-//        let homeVC = HomeVC()
-//        let navigationController = UINavigationController(rootViewController: homeVC)
-//        navigationController.modalPresentationStyle = .fullScreen
-//        navigationController.modalTransitionStyle = .crossDissolve
-//
-//        present(navigationController, animated: true)
+        let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Zapfino", size: 15)!]
+        homeVC.title = "Series Project"
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.modalTransitionStyle = .crossDissolve
+        present(navigationController, animated: true)
     }
     
 }

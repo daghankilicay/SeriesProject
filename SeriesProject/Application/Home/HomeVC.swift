@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeVC: UIViewController {
+class HomeVC: BaseVC {
     var viewModel = HomeViewModel()
     @IBOutlet weak var dayOfSeriesCollectionView: UICollectionView! {
         didSet {
@@ -21,17 +21,19 @@ class HomeVC: UIViewController {
                     
                 }
                 .disposed(by: viewModel.disposeBag)
+            dayOfSeriesCollectionView.decelerationRate = .fast
             
             let layout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSize(width: 100, height: 100)
+            layout.itemSize = CGSize(width: 80, height: 100)
             layout.sectionInset = UIEdgeInsets.zero
             layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 20
+            layout.minimumLineSpacing = 5
             layout.minimumInteritemSpacing = 0
             dayOfSeriesCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
             dayOfSeriesCollectionView.collectionViewLayout = layout
         }
     }
+
     @IBOutlet weak var popularSeriesCollectionView: UICollectionView!{
         didSet {
             popularSeriesCollectionView.isHidden = true
@@ -39,30 +41,27 @@ class HomeVC: UIViewController {
                 .subscribeOn(MainScheduler.instance)
                 .subscribe { [weak self] _ in self?.popularSeriesCollectionView.reloadData() }
                 .disposed(by: viewModel.disposeBag)
-            
-            
-            
-            let yourWidth = popularSeriesCollectionView.bounds.width/3
-            let yourHeight = popularSeriesCollectionView.bounds.height/3
+
+            let yourWidth = screen().width * 0.46
+            let yourHeight = screen().width * 0.80
             let size = CGSize(width: yourWidth, height: yourHeight)
             
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = size
             layout.sectionInset = UIEdgeInsets.zero
             layout.scrollDirection = .vertical
-            layout.minimumLineSpacing = 20
+            layout.minimumLineSpacing = 10
             layout.minimumInteritemSpacing = 0
-            popularSeriesCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+            popularSeriesCollectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             popularSeriesCollectionView.collectionViewLayout = layout
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchCovidData()
+        viewModel.fetchSeriesResponseData()
         registerNib()
         bindStatus()
-        // Do any additional setup after loading the view.
     }
     
     private func registerNib() {
@@ -81,15 +80,15 @@ extension HomeVC {
             .subscribe(onNext: { [weak self] status in
                 switch status {
                 case .loading:
+                    self?.showProgress()
                     self?.popularSeriesCollectionView.isHidden = true
                     self?.dayOfSeriesCollectionView.isHidden = true
-                    print("")
                 case let .error(error):
                     print(error)
                 case .success:
+                    self?.hideProgress()
                     self?.popularSeriesCollectionView.isHidden = false
                     self?.dayOfSeriesCollectionView.isHidden = false
-                    print("")
                 }
             })
             .disposed(by: viewModel.disposeBag)
@@ -107,7 +106,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == dayOfSeriesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DayOfSeriesCell", for: indexPath) as! DayOfSeriesCell
@@ -120,7 +119,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             return UICollectionViewCell.init()
         }
-        
     }
 }
 

@@ -21,30 +21,23 @@ final class HomeViewModel: BaseViewModel {
     let pageLoadingStatus = BehaviorRelay<SeriesResponseState>(value: SeriesResponseState.loading)
     let dayOfTheSeries = BehaviorRelay<DayOfTheSeries?>(value: nil)
     let popularSeries = BehaviorRelay<[PopularSeries]?>(value: nil)
-    
-    func fetchCovidData() {
+
+    func fetchSeriesResponseData() {
         self.pageLoadingStatus.accept(.loading)
-        BlobAPI.fetch(endPoint: "jsonblob/887822236724248576") { [unowned self] (covidData: SeriesResponseResult) in
-            switch covidData {
-            case .success(let covidData):
-                self.popularSeries.accept(covidData.popularSeries)
-                self.dayOfTheSeries.accept(covidData.dayOfTheSeries)
+        BlobAPI.fetch(endPoint: "jsonblob/887822236724248576") { [unowned self] (seriesResponse: SeriesResponseResult) in
+            switch seriesResponse {
+            case .success(let seriesResponse):
+                self.popularSeries.accept(seriesResponse.popularSeries)
+                self.dayOfTheSeries.accept(seriesResponse.dayOfTheSeries)
                 self.pageLoadingStatus.accept(.success)
             case .failure(let error):
                 self.pageLoadingStatus.accept(.error(error.localizedDescription))
             }
         }
     }
-    
-    func pageOpened() {
-    }
-    
+
     func numberOfItems() -> Int {
 //        return result?.count ?? 0
         return 0
-    }
-    
-    func viewDidDisappear() {
-//        coordinator?.didFinishListing()
     }
 }

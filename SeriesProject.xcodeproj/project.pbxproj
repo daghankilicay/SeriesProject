@@ -29,6 +29,10 @@
 		C3E170DE27160D3700FDA629 /* DayOfSeriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170DC27160D3700FDA629 /* DayOfSeriesCell.xib */; };
 		C3E170E127160D4A00FDA629 /* PopularSeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170DF27160D4A00FDA629 /* PopularSeriesCell.swift */; };
 		C3E170E227160D4A00FDA629 /* PopularSeriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170E027160D4A00FDA629 /* PopularSeriesCell.xib */; };
+		C3E170E427161F8600FDA629 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170E327161F8600FDA629 /* BaseVC.swift */; };
+		C3E170E72716208D00FDA629 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170E62716208D00FDA629 /* ProgressView.swift */; };
+		C3E170E92716209800FDA629 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E170E82716209800FDA629 /* ProgressView.xib */; };
+		C3E170EC2716210600FDA629 /* GlobalDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E170EB2716210600FDA629 /* GlobalDef.swift */; };
 		C5F17C5F00460C3F583A0B31 /* Pods_SeriesProject_SeriesProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C44F5D387376CD7CCEDCEE6 /* Pods_SeriesProject_SeriesProjectUITests.framework */; };
 		C9FE4F6E2CA07226EAB165FA /* Pods_SeriesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E82DD6AE72DF3698C7499C /* Pods_SeriesProject.framework */; };
 		DDFC175756210F948345BBC3 /* Pods_SeriesProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE76BA573FB0F7C9F38206C /* Pods_SeriesProjectTests.framework */; };
@@ -89,6 +93,10 @@
 		C3E170DC27160D3700FDA629 /* DayOfSeriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayOfSeriesCell.xib; sourceTree = "<group>"; };
 		C3E170DF27160D4A00FDA629 /* PopularSeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesCell.swift; sourceTree = "<group>"; };
 		C3E170E027160D4A00FDA629 /* PopularSeriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularSeriesCell.xib; sourceTree = "<group>"; };
+		C3E170E327161F8600FDA629 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		C3E170E62716208D00FDA629 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		C3E170E82716209800FDA629 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
+		C3E170EB2716210600FDA629 /* GlobalDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDef.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,8 @@
 		C3E170852716016000FDA629 /* SeriesProject */ = {
 			isa = PBXGroup;
 			children = (
+				C3E170EA271620F800FDA629 /* Util */,
+				C3E170E52716206E00FDA629 /* Progress */,
 				C3E170B9271602E900FDA629 /* AppDelegate */,
 				C3E170B8271602E300FDA629 /* Application */,
 				C3E170BC2716032500FDA629 /* Networking */,
@@ -283,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				C3E170D627160AB000FDA629 /* BaseViewModel.swift */,
+				C3E170E327161F8600FDA629 /* BaseVC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -312,6 +323,23 @@
 				C3E170DC27160D3700FDA629 /* DayOfSeriesCell.xib */,
 			);
 			path = DayOfSeriesCell;
+			sourceTree = "<group>";
+		};
+		C3E170E52716206E00FDA629 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170E62716208D00FDA629 /* ProgressView.swift */,
+				C3E170E82716209800FDA629 /* ProgressView.xib */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		C3E170EA271620F800FDA629 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C3E170EB2716210600FDA629 /* GlobalDef.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E170E92716209800FDA629 /* ProgressView.xib in Resources */,
 				C3E170932716016200FDA629 /* LaunchScreen.storyboard in Resources */,
 				C3E170C22716034A00FDA629 /* DetailVC.xib in Resources */,
 				C3E170CC271603E300FDA629 /* SplashVC.xib in Resources */,
@@ -565,8 +594,11 @@
 				C3E170D2271605C700FDA629 /* BaseAPI.swift in Sources */,
 				C3E170BE2716033E00FDA629 /* HomeViewModel.swift in Sources */,
 				C3E170C42716035500FDA629 /* DetailViewModel.swift in Sources */,
+				C3E170EC2716210600FDA629 /* GlobalDef.swift in Sources */,
+				C3E170E427161F8600FDA629 /* BaseVC.swift in Sources */,
 				C3E170DD27160D3700FDA629 /* DayOfSeriesCell.swift in Sources */,
 				C3E170872716016000FDA629 /* AppDelegate.swift in Sources */,
+				C3E170E72716208D00FDA629 /* ProgressView.swift in Sources */,
 				C3E170CB271603E300FDA629 /* SplashVC.swift in Sources */,
 				C3E170CE2716051D00FDA629 /* SeriesResponse.swift in Sources */,
 			);

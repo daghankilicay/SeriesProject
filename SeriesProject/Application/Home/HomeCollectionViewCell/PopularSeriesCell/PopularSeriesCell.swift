@@ -22,13 +22,22 @@ class PopularSeriesCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.layer.cornerRadius = 10
     }
     
     private func configureUI() {
         img.kf.setImage(with: URL(string: popularSeries?.image?.medium ?? ""))
         lblSeriesName.text = popularSeries?.name ?? ""
-        lblSeriesPremiered.text = popularSeries?.premiered ?? ""
+        lblSeriesPremiered.text = formatDate(date: popularSeries?.premiered)
         lblSeriesLanguage.text = popularSeries?.language ?? ""
-        
+    }
+    
+    private func formatDate(date: String?) -> String {
+        guard let date = date else { return "" }
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-mm-dd"
+        guard let formattedDate = inputFormatter.date(from: date) else { return "" }
+        inputFormatter.dateFormat = "dd-mm-yyyy"
+        return inputFormatter.string(from: formattedDate)
     }
 }

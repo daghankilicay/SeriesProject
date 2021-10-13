@@ -11,29 +11,46 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DayOfSeriesCell" customModule="SeriesProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uRa-e0-7Q2">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-gy-kkA">
+                        <rect key="frame" x="0.0" y="75" width="80" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRa-e0-7Q2">
+                        <rect key="frame" x="3" y="0.0" width="75" height="75"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="MBP-LM-yTB"/>
+                            <constraint firstAttribute="width" constant="75" id="w0v-WU-ncn"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="uRa-e0-7Q2" secondAttribute="bottom" id="Efe-1G-Dct"/>
-                <constraint firstItem="uRa-e0-7Q2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XTp-rJ-K7c"/>
-                <constraint firstItem="uRa-e0-7Q2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qFR-kL-BE8"/>
-                <constraint firstAttribute="trailing" secondItem="uRa-e0-7Q2" secondAttribute="trailing" id="ru8-K7-5nL"/>
+                <constraint firstItem="uRa-e0-7Q2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="A1f-fX-jDK"/>
+                <constraint firstAttribute="trailing" secondItem="uRa-e0-7Q2" secondAttribute="trailing" constant="2" id="ESu-mZ-muT"/>
+                <constraint firstAttribute="trailing" secondItem="ozo-gy-kkA" secondAttribute="trailing" id="L12-ig-V1g"/>
+                <constraint firstItem="ozo-gy-kkA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="McU-B8-nLe"/>
+                <constraint firstItem="ozo-gy-kkA" firstAttribute="top" secondItem="uRa-e0-7Q2" secondAttribute="bottom" id="Mo1-fZ-4sp"/>
+                <constraint firstItem="uRa-e0-7Q2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aGM-6G-W8J"/>
+                <constraint firstAttribute="bottom" secondItem="ozo-gy-kkA" secondAttribute="bottom" id="i8N-R4-00N"/>
             </constraints>
             <size key="customSize" width="130" height="93"/>
             <connections>
                 <outlet property="img" destination="uRa-e0-7Q2" id="eev-6o-9J8"/>
+                <outlet property="lblName" destination="ozo-gy-kkA" id="HaI-qT-moY"/>
             </connections>
-            <point key="canvasLocation" x="157.97101449275362" y="73.995535714285708"/>
+            <point key="canvasLocation" x="155.07246376811597" y="72.991071428571431"/>
         </collectionViewCell>
     </objects>
 </document>
